@@ -12,7 +12,7 @@ import img6 from '../../img/Banner/banner6.jpg';
 
 const Banner = () => {
         return (
-                <Carousel autoPlay={1500} emulateTouch={true} infiniteLoop={true} centerSlidePercentage={true} dynamicHeight={true}
+                <Carousel autoPlay={true} emulateTouch={true} infiniteLoop={true} centerSlidePercentage={true} dynamicHeight={true}
                         preventMovementUntilSwipeScrollTolerance={true}>
                         <div>
                                 <img alt="" src={img1} />
