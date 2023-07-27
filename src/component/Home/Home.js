@@ -5,7 +5,6 @@ import Banner from '../Banner/Banner';
 const home = () => {
         return (
                 <div>
-                       <Navbar/>
                        <Banner/>
                 </div>
         );

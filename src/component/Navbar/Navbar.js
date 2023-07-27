@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Team', href: '/team', current: false },
   { name: 'Service', href: '/service', current: false },
   { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Shop', href: '/shop', current: false },
 ]
 
 function classNames(...classes) {
@@ -37,11 +37,13 @@ export default function Example() {
               {/* image and nav text */}
               <div className="flex flex-auto justify-center sm:items-center sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-[5rem] w-auto"
-                    src={logo}
-                    alt="Strong Body"
-                  />
+                  <Link to="/">
+                    <img
+                      className="h-[5rem] w-auto"
+                      src={logo}
+                      alt="Strong Body"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

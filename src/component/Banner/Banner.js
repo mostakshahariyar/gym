@@ -12,7 +12,8 @@ import img6 from '../../img/Banner/banner6.jpg';
 
 const Banner = () => {
         return (
-                <Carousel autoPlay={true} emulateTouch={true} infiniteLoop={true} centerSlidePercentage={true} dynamicHeight={true}
+
+                <Carousel className='md:mx-28 mx-[5%]  mb-8' autoPlay='1000' emulateTouch={true} infiniteLoop={true} centerSlidePercentage={true} dynamicHeight={true}
                         preventMovementUntilSwipeScrollTolerance={true}>
                         <div>
                                 <img alt="" src={img1} />
@@ -33,6 +34,7 @@ const Banner = () => {
                                 <img alt="" src={img6} />
                         </div>
                 </Carousel>
+
         );
 };
 
