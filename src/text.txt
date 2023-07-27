@@ -1,0 +1,42 @@
+Sub CreatePresentation()
+    Dim PowerPointApp As Object
+    Dim PowerPointPres As Object
+    Dim Slide As Object
+    Dim ImgPath As String
+    Dim SlideNumber As Integer
+    
+    'Set the path to the folder containing your images
+    ImgPath = "D:\pptx for image"
+    
+    'Create a new instance of PowerPoint
+    Set PowerPointApp = CreateObject("PowerPoint.Application")
+    PowerPointApp.Visible = True
+    
+    'Create a new presentation
+    Set PowerPointPres = PowerPointApp.Presentations.Add
+    
+    'Set the number of slides to be 12
+    For SlideNumber = 1 To 12
+        'Add a new slide
+        Set Slide = PowerPointPres.Slides.Add(SlideNumber, 11) '11 represents the layout code for title and content slide
+        
+        'Set the title for the slide
+        Slide.Shapes.Title.TextFrame.TextRange.Text = "Slide " & SlideNumber
+        
+        'Add the paragraph text to the content placeholder on the slide
+        Slide.Shapes(2).TextFrame.TextRange.Text = "The paragraph text goes here..."
+        
+        'Insert an image to the slide (replace "2nd div_LI.jpg" with the actual image filename)
+        Slide.Shapes.AddPicture FileName:=ImgPath & "img4.jpg", LinkToFile:=msoFalse, SaveWithDocument:=msoTrue, _
+            Left:=100, Top:=100, Width:=400, Height:=300 'Adjust the Left, Top, Width, and Height values as per your image size preference
+        
+        'Adjust the image position and size as needed for each slide
+        
+        'You can add any other formatting or adjustments to the slide here if required
+    Next SlideNumber
+    
+    'Cleanup and release the objects
+    Set Slide = Nothing
+    Set PowerPointPres = Nothing
+    Set PowerPointApp = Nothing
+End Sub
