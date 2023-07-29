@@ -10,10 +10,10 @@ import img2 from "../../img/footer/footer2.jpg"
 import img3 from "../../img/footer/footer3.jpg"
 const Footer = () => {
         return (
-                <div>
+                <div className='bg-gray-300'>
                         <hr className='border-t-4 border-gray-800 rounded' />
-                        <div className='my-8 md:mx-28 mx-[5%]  mb-8 '>
-                                <div className='grid grid-cols-3 gap-5'>
+                        <div className='my-8 md:mx-28 mx-[5%] mb-8 '>
+                                <div className='grid grid-clos-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                                         <div>
                                                 <h1 className='text-3xl font-semibold'>About</h1>
                                                 <p className='my-2 flex text-justify'>
@@ -37,7 +37,7 @@ const Footer = () => {
 
 
                                         </div>
-                                        <div className='mx-auto'>
+                                        <div className='md:mx-auto'>
                                                 <h1 className='text-3xl font-semibold'>Contact</h1>
                                                 <p className='my-2 flex text-justify'>
                                                         Uttara10, Road-10, House-10,<br />
