@@ -1,22 +1,27 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../../img/logo/gym logo.svg';
 import { Link } from 'react-router-dom';
 
-const navigation = [
-  { name: 'Home', href: '/home', current: true },
-  { name: 'Team', href: '/team', current: false },
-  { name: 'Service', href: '/service', current: false },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: '/contact', current: false },
-]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
 export default function Example() {
+  const [navigation, setNavigation] = useState([
+    { name: 'Home', href: '/home', current: false },
+    { name: 'Team', href: '/team', current: false },
+    { name: 'Service', href: '/service', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ]);
+  const handleItemClick = (index) => {
+    // Update the 'current' status of the clicked item
+    const updatedNavigation = navigation.map((item, i) =>
+      i === index ? { ...item, current: true } : { ...item, current: false }
+    );
+    setNavigation(updatedNavigation);
+  };
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -47,10 +52,11 @@ export default function Example() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item, index) => (
                       <Link
                         key={item.name}
                         to={item.href}
+                        onClick={() => handleItemClick(index)}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
@@ -154,4 +160,4 @@ export default function Example() {
       )}
     </Disclosure>
   )
-}
+};

@@ -1,10 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const Team = props => {
-        console.log(props)
-        let navigate = useNavigate();
         return (
                 <div className="w-[350px] flex flex-col items-center justify-start p-[5px] m-auto my-5 border-4 shadow-white drop-shadow-2xl shadow-2xl hover:bg-white rounded border-double hover:translate-y-1 hover:duration-500 duration-500">
 
