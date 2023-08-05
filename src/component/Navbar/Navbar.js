@@ -9,7 +9,7 @@ function classNames(...classes) {
 }
 export default function Example() {
   const [navigation, setNavigation] = useState([
-    { name: 'Home', href: '/home', current: false },
+    { name: 'Home', href: '/home', current: true },
     { name: 'Team', href: '/team', current: false },
     { name: 'Service', href: '/service', current: false },
     { name: 'About', href: '/about', current: false },

@@ -86,7 +86,7 @@ const Footer = () => {
                                 </div>
                         </div>
                         {/* copy right */}
-                        <div>
+                        <div className='bg-gray-500 py-1'>
                                 <p className='flex text-lg pb-2 justify-center gap-1 items-center'><AiFillCopyrightCircle/> 2023 fitness gym</p>
 
                         </div>
