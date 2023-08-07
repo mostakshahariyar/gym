@@ -13,7 +13,7 @@ const Team = props => {
                                 <h3 className='font-mono text-lg font-bold tracking-tighter'>{name}</h3>
                                 <p>Ratting: {rating}</p>
                                 <Link to={'/details'}>
-                                        <button className='rounded-full py-2 px-3 font-medium bg-gray-800 text-white hover:text-gray-800 mt-1 transition duration-700 ease-in-out hover:bg-cyan-500'>All Details</button>
+                                        <button className='rounded-full py-2 px-3 font-medium bg-gray-800 text-white hover:text-gray-800 my-2 transition duration-700 ease-in-out hover:bg-cyan-500'>All Details</button>
                                 </Link>
                         </div>
                 </div>
