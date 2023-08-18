@@ -1,9 +1,13 @@
 import React from 'react';
+import "./about.css"
 
 const About = () => {
         return (
                 <div>
-                        <h1 className='text-center'>This is a About page.</h1>
+                        <div className='about-image flex justify-center items-center'>
+                                <h1 className='text-white font-mono font-extrabold text-6xl'>About Us</h1>
+                        </div>
+                        
                 </div>
         );
 };

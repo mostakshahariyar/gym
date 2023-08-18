@@ -1,11 +1,13 @@
 import React from 'react';
-import img1 from "../../img/serivec/1.jpg"
+import './service.css'
 
 const Service = () => {
         return (
                 <div className='bg-gray-300'>
-                        <div className='h-[100%]'>
-                                <img className='w-[100%]' src={img1} alt="" />
+                        <div className='h-[100%] service-image'>
+                                <div className='px-[5%]'>
+                                        <h1>this a service page</h1>
+                                </div>
                         </div>
                         
                 </div>
