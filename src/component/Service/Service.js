@@ -1,6 +1,12 @@
 import React from 'react';
 import './service.css'
 import serviceImg from '../../img/serivec/service.jpg'
+import client1 from "../../img/about/client-1.png"
+import client2 from "../../img/about/client-2.png"
+import client3 from "../../img/about/client-3.png"
+import client4 from "../../img/about/client-4.png"
+import client5 from "../../img/about/client-5.png"
+import client6 from "../../img/about/client-6.png"
 
 const Service = () => {
         return (
@@ -163,6 +169,43 @@ const Service = () => {
                                                         </div>
                                                 </div>
                                         </div>
+                                </div>
+                        </div>
+                        {/* sponsor logo */}
+                        <div className='my-8 md:mx-28 mx-[5%] mb-8'>
+                                <h1 className='font-semibold text-5xl text-center my-2 text-gray-800'>Our Sponsor</h1>
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 my-3'>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client1} alt="" />
+                                                </div>
+                                        </div>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client2} alt="" />
+                                                </div>
+                                        </div>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client3} alt="" />
+                                                </div>
+                                        </div>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client4} alt="" />
+                                                </div>
+                                        </div>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client5} alt="" />
+                                                </div>
+                                        </div>
+                                        <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                                <div className='flex justify-center items-center'>
+                                                        <img src={client6} alt="" />
+                                                </div>
+                                        </div>
+                                        
                                 </div>
                         </div>
                 </div>

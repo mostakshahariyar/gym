@@ -16,6 +16,7 @@ const Banner = () => {
                         preventMovementUntilSwipeScrollTolerance={true}>
                         <div>
                                 <img alt="" src={img1} />
+                                
                         </div>
                         <div>
                                 <img alt="" src={img2} />
