@@ -21,17 +21,17 @@ const Footer = () => {
                                                 </p>
                                                 {/* add social line  */}
                                                 <div className='flex gap-4'>
-                                                        <Link to='https://www.facebook.com/mostak.shahariyar.0823'>
-                                                                <BsFacebook className='text-2xl hover:text-blue-800' />
+                                                        <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to='https://www.facebook.com/mostak.shahariyar.0823'>
+                                                        <i class="fa-brands fa-facebook-f leading-8"></i>
                                                         </Link>
-                                                        <Link to="https://www.instagram.com/mostakshahariyar18/">
-                                                                <BiLogoInstagramAlt className='text-2xl hover:text-blue-800' />
+                                                        <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to="https://www.instagram.com/mostakshahariyar18/">
+                                                        <i class="fa-brands fa-instagram leading-8"></i>
                                                         </Link>
-                                                        <Link to='https://mail.google.com/mail/u/0/#inbox'>
-                                                                <BiLogoGmail className='text-2xl hover:text-blue-800' />
+                                                        <Link to='https://twitter.com/Mostak0805' className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all'>
+                                                        <i class="fa-brands fa-twitter leading-8"></i>
                                                         </Link>
-                                                        <Link to="https://www.linkedin.com/in/mostak0805/">
-                                                                <AiFillLinkedin className='text-2xl hover:text-blue-800' />
+                                                        <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to="https://www.linkedin.com/in/mostak0805/">
+                                                        <i class="fa-brands fa-linkedin leading-8"></i>
                                                         </Link>
                                                 </div>
 
