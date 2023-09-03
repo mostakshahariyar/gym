@@ -9,7 +9,7 @@ const home = () => {
         return (
                 <div>
                        <Banner/>
-                       <Teamlist teams={teams.slice(0,4)} isLoading={isLoading}/>
+                       <Teamlist teams={teams.slice(0,6)} isLoading={isLoading}/>
 
                 </div>
         );
