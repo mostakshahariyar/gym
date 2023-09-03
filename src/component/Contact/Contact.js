@@ -40,7 +40,7 @@ const Contact = () => {
                                         </div>
                                 </div>
                         </section>
-                        <hr />
+                        <hr className='h-1'/>
                         {/* get in touch */}
                         <section className='py-8 px-[5%] bg-gray-300'>
                                 <div className="grid lg:grid-rows-3 md:grid-rows-2 gap-x-30 mt-8 ml-8 md:grid-flow-col">
@@ -71,7 +71,7 @@ const Contact = () => {
                                         </div>
                                 </div>
                         </section>
-                        <hr />
+                        <hr className='h-1'/>
                         {/* notify me */}
                         <section className='py-8 bg-gray-300 px-[5%]'>
                                 <div className="md:grid xl:grid-rows-3 xl:gap-x-30 lg:mx-8 mx-6 pl-2 lg:grid-flow-col md:gap-x-10 lg:gap-x-40 bg-gray-800 rounded-3xl lg:p-5 p-3">
