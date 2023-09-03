@@ -106,19 +106,19 @@ const About = () => {
                         {/* our review */}
                         <div className='my-8 md:mx-28 mx-[5%] mb-8'>
                                 <dir className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-0'>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem]'>
+                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>8</span>
                                                 <p className='mt-2 font-mono text-xl'>YEARS OF EXPERIENCE</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] '>
+                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>16</span>
                                                 <p className='mt-2 font-mono text-xl'>SKILLED TRAINER</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] '>
+                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>64K</span>
                                                 <p className='mt-2 font-mono text-xl'>CALORIES BURNED</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] '>
+                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>256</span>
                                                 <p className='mt-2 font-mono text-xl'>HAPPY MEMBERS</p>
                                         </div>

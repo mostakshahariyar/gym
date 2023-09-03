@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Teamlist from '../Teams/Teamlist';
 
 const Team = props => {
         const {name, title, rating,img} = props.team;
@@ -16,6 +17,7 @@ const Team = props => {
                                         <button className='rounded-full py-2 px-3 font-medium bg-gray-800 text-white hover:text-gray-800 my-2 transition duration-700 ease-in-out hover:bg-cyan-500'>All Details</button>
                                 </Link>
                         </div>
+                        <Teamlist/>
                 </div>
         );
 };

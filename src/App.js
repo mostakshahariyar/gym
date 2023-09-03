@@ -9,8 +9,8 @@ import About from './component/About/About';
 import Navbar from './component/Navbar/Navbar'
 import Footer from './component/Footer/Footer';
 import Contact from './component/Contact/Contact';
-import Teams from './Teams/Teams';
 import Details from './component/Details/Details';
+import Teams from './component/Teams/Teams';
 
 function App() {
   return (
