@@ -12,7 +12,7 @@ const Contact = () => {
                         </div>
                         {/* address section */}
                         <section className='bg-gray-300 px-[5%]'>
-                                <div className="grid lg:grid-rows-3 md:grid-rows-2 gap-x-30 py-8 ml-8 md:grid-flow-col">
+                                <div data-aos="zoom-in" className="grid lg:grid-rows-3 md:grid-rows-2 gap-x-30 py-8 ml-8 md:grid-flow-col">
                                         <div className='row-span-3 pb-5 font-bold text-3xl tracking-wide	 font-mono'>Location</div>
                                         <div className='row-span-3'>
                                                 <div className='mb-3'>
@@ -43,7 +43,7 @@ const Contact = () => {
                         <hr className='h-1'/>
                         {/* get in touch */}
                         <section className='py-8 px-[5%] bg-gray-300'>
-                                <div className="grid lg:grid-rows-3 md:grid-rows-2 gap-x-30 mt-8 ml-8 md:grid-flow-col">
+                                <div data-aos="zoom-in" className="grid lg:grid-rows-3 md:grid-rows-2 gap-x-30 mt-8 ml-8 md:grid-flow-col">
                                         <div className='row-span-2 tracking-tighter	 font-bold text-3xl font-mono'>Get touch</div>
                                         <div className='row-span-3'>
                                                 <div className='mb-3'>
@@ -74,7 +74,7 @@ const Contact = () => {
                         <hr className='h-1'/>
                         {/* notify me */}
                         <section className='py-8 bg-gray-300 px-[5%]'>
-                                <div className="md:grid xl:grid-rows-3 xl:gap-x-30 lg:mx-8 mx-6 pl-2 lg:grid-flow-col md:gap-x-10 lg:gap-x-40 bg-gray-800 rounded-3xl lg:p-5 p-3">
+                                <div data-aos="zoom-in" className="md:grid xl:grid-rows-3 xl:gap-x-30 lg:mx-8 mx-6 pl-2 lg:grid-flow-col md:gap-x-10 lg:gap-x-40 bg-gray-800 rounded-3xl lg:p-5 p-3">
                                         <div className="lg:row-span-3 mb-5 lg:mb-0 mx-auto ml-5">
                                                 <h1 className='text-white md:text-[30px] text-[20px] w-auto font-semibold'>Sign up for our Newsletter</h1>
                                                 <p className='text-gray-300 md:text-xl  md:w-[450px]'>Get notified about the latest career insights, study tips, and offers at Leverage Edu.</p>

@@ -84,11 +84,7 @@ export default function Example() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://i.ibb.co/HFJdjzx/Whats-App-Image-2023-07-26-at-02-25-56.jpg"
-                        alt=""
-                      />
+                      <i className="fa-solid fa-arrow-right-to-bracket h-8 w-8 rounded-full text-white flex justify-center items-center"></i>
                     </Menu.Button>
                   </div>
                   <Transition

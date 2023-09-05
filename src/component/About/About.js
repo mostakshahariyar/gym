@@ -9,7 +9,7 @@ const About = () => {
                         </div>
                         <div className='my-8 md:mx-28 mx-[5%] mb-8'>
                                 <div className='grid grid-cols-1 mb-5 2xl:grid-cols-2'>
-                                        <div className='mb-5 2xl:mb-0'>
+                                        <div data-aos="zoom-in" className='mb-5 2xl:mb-0'>
                                                 <div className='about-container1  hover:scale-110 duration-300 transition-all ease-in-out delay-100 flex 2xl:mb-0 mb-5'>
                                                         <div className='flex flex-col ml-5 pb-5 justify-end items-start'>
                                                                 <span className='uppercase mb-5 text-2xl font-medium text-white'>
@@ -32,7 +32,7 @@ const About = () => {
                                                 </div>
                                         </div>
 
-                                        <div>
+                                        <div data-aos="zoom-in">
                                                 <div className='about-container2  hover:scale-110 duration-300 transition-all ease-in-out delay-100 flex '>
                                                         <div className='flex flex-col ml-5 pb-5 justify-end items-start'>
                                                                 <span className='uppercase mb-5 text-2xl font-medium text-white'>
@@ -59,7 +59,11 @@ const About = () => {
                         {/* our mission */}
                         <div className='my-8 md:mx-28 mx-[5%] mb-8'>
                                 <div className=' grid lg:grid-cols-2 lg:mb-0 grid-cols-1 mb-5'>
-                                        <div className='flex flex-col lg:mb-0 mb-5 justify-center items-start lg:pl-[40%]'>
+                                        <div
+                                                data-aos="fade-right"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine"
+                                                className='flex flex-col lg:mb-0 mb-5 justify-center items-start lg:pl-[40%]'>
                                                 <div className='mb-1 border-b-4 hover:border-gray-800  hover:scale-110 duration-300 transition-all ease-in-out delay-100'>
                                                         <h1 className='text-5xl text-gray-300 hover:text-gray-800 font-medium transition delay-75'>STRONGER</h1>
 
@@ -76,7 +80,11 @@ const About = () => {
 
                                                 </div>
                                         </div>
-                                        <div className='flex  flex-col gap-4 justify-center items-start lg:pl-[40%] text-justify'>
+                                        <div
+                                                data-aos="fade-left"
+                                                data-aos-offset="300"
+                                                data-aos-easing="ease-in-sine"
+                                                className='flex  flex-col gap-4 justify-center items-start lg:pl-[40%] text-justify'>
                                                 <div>
                                                         <h1 className='text-4xl font-medium'>Our Story</h1>
                                                         <p className='line-clamp-3 hover:line-clamp-none transition delay-100'>
@@ -106,19 +114,19 @@ const About = () => {
                         {/* our review */}
                         <div className='my-8 md:mx-28 mx-[5%] mb-8'>
                                 <dir className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-0'>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                        <div data-aos="zoom-in" className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>8</span>
                                                 <p className='mt-2 font-mono text-xl'>YEARS OF EXPERIENCE</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                        <div data-aos="zoom-in" className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>16</span>
                                                 <p className='mt-2 font-mono text-xl'>SKILLED TRAINER</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                        <div data-aos="zoom-in" className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>64K</span>
                                                 <p className='mt-2 font-mono text-xl'>CALORIES BURNED</p>
                                         </div>
-                                        <div className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
+                                        <div data-aos="zoom-in" className='border-2 border-gray-800 flex flex-col justify-center items-center py-[6rem] hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <span className='text-5xl font-semibold'>256</span>
                                                 <p className='mt-2 font-mono text-xl'>HAPPY MEMBERS</p>
                                         </div>

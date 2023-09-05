@@ -11,6 +11,8 @@ import Footer from './component/Footer/Footer';
 import Contact from './component/Contact/Contact';
 import Details from './component/Details/Details';
 import Teams from './component/Teams/Teams';
+import Signup from './component/Signup/Signup';
+import Login from './component/Login/Login';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path='/details' element={<Details/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
         <Route path="*" element={<NotFound />} />
 
       </Routes>

@@ -1,8 +1,4 @@
 import React from 'react';
-import { BsFacebook } from "react-icons/bs";
-import { BiLogoInstagramAlt } from "react-icons/bi";
-import { BiLogoGmail } from "react-icons/bi";
-import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillCopyrightCircle } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import img1 from "../../img/footer/footer1.jpg"
@@ -10,7 +6,9 @@ import img2 from "../../img/footer/footer2.jpg"
 import img3 from "../../img/footer/footer3.jpg"
 const Footer = () => {
         return (
-                <div className='bg-gray-300'>
+                <div
+                        data-aos="fade-up"
+                        className='bg-gray-300'>
                         <hr className='border-t-4 border-gray-800 rounded' />
                         <div className='my-8 md:mx-28 mx-[5%] mb-8 '>
                                 <div className='grid grid-clos-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -22,16 +20,16 @@ const Footer = () => {
                                                 {/* add social line  */}
                                                 <div className='flex gap-4'>
                                                         <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to='https://www.facebook.com/mostak.shahariyar.0823'>
-                                                        <i class="fa-brands fa-facebook-f leading-8"></i>
+                                                                <i className="fa-brands fa-facebook-f leading-8"></i>
                                                         </Link>
                                                         <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to="https://www.instagram.com/mostakshahariyar18/">
-                                                        <i class="fa-brands fa-instagram leading-8"></i>
+                                                                <i className="fa-brands fa-instagram leading-8"></i>
                                                         </Link>
                                                         <Link to='https://twitter.com/Mostak0805' className='w-8 h-8 text-center shadow-lg bg-white rounded-full  hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all'>
-                                                        <i class="fa-brands fa-twitter leading-8"></i>
+                                                                <i className="fa-brands fa-twitter leading-8"></i>
                                                         </Link>
                                                         <Link className='w-8 h-8 text-center shadow-lg bg-white rounded-full hover:bg-gray-800 hover:text-white hover:-translate-y-1 transition-all' to="https://www.linkedin.com/in/mostak0805/">
-                                                        <i class="fa-brands fa-linkedin leading-8"></i>
+                                                                <i className="fa-brands fa-linkedin leading-8"></i>
                                                         </Link>
                                                 </div>
 
@@ -50,7 +48,7 @@ const Footer = () => {
                                         <div>
                                                 <h1 className='text-3xl font-semibold mb-1'>Blogs</h1>
                                                 <div className='grid grid-row-3 gap-2'>
-                                                       
+
                                                         <div className='flex gap-10 items-center'>
                                                                 <div className='w-[50%]'>
                                                                         <img src={img2} alt="" />
@@ -78,8 +76,8 @@ const Footer = () => {
                                                                         <p>Push your limits, surpass your goals, and achieve peak performance in pursuit of greatness.</p>
                                                                 </div>
                                                         </div>
-                                                        
-                                                        
+
+
 
                                                 </div>
                                         </div>
@@ -87,7 +85,7 @@ const Footer = () => {
                         </div>
                         {/* copy right */}
                         <div className='bg-gray-500 py-1'>
-                                <p className='flex text-lg pb-2 justify-center gap-1 items-center'><AiFillCopyrightCircle/> 2023 fitness gym</p>
+                                <p className='flex text-lg pb-2 justify-center gap-1 items-center'><AiFillCopyrightCircle /> 2023 fitness gym</p>
 
                         </div>
                 </div>

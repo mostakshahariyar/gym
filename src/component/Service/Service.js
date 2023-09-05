@@ -120,10 +120,12 @@ const Service = () => {
                         {/* some info our service */}
                         <div className='my-8 md:mx-28 mx-[5%] mb-8 '>
                                 <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-3 gap-6'>
-                                        <div>
+                                        <div data-aos="fade-right"
+                                                data-aos-offset="500"
+                                                data-aos-easing="ease-in-sine">
                                                 <h1 className='text-6xl font-bold uppercase leading-none'>shop now <br />save more</h1>
                                         </div>
-                                        <div className='flex flex-col gap-6 mr-2'>
+                                        <div className='flex flex-col gap-6 mr-2' data-aos="zoom-in" data-aos-offset="500">
                                                 <div className='flex flex-col justify-center items-start'>
                                                         <div>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
@@ -144,7 +146,9 @@ const Service = () => {
                                                         <div className='text-justify'>"Free returns" refers to a policy where customers can return products without incurring any additional charges for the return shipping or processing. This offers customers convenience and confidence when shopping online.</div>
                                                 </div>
                                         </div>
-                                        <div className='flex flex-col gap-6 mr-2'>
+                                        <div className='flex flex-col gap-6 mr-2' data-aos="fade-left"
+                                                data-aos-offset="500"
+                                                data-aos-easing="ease-in-sine">
                                                 <div className='flex flex-col justify-center items-start'>
                                                         <div>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
@@ -174,7 +178,7 @@ const Service = () => {
                         {/* sponsor logo */}
                         <div className='my-8 md:mx-28 mx-[5%] mb-8'>
                                 <h1 className='font-semibold text-5xl text-center my-2 text-gray-800'>Our Sponsor</h1>
-                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 my-3'>
+                                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-3 my-3' data-aos="zoom-in">
                                         <div className='border-2 border-gray-800 hover:scale-110 duration-300 transition-all ease-in-out delay-100 hover:bg-gray-200'>
                                                 <div className='flex justify-center items-center'>
                                                         <img src={client1} alt="" />
@@ -205,7 +209,7 @@ const Service = () => {
                                                         <img src={client6} alt="" />
                                                 </div>
                                         </div>
-                                        
+
                                 </div>
                         </div>
                 </div>
