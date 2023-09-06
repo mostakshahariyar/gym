@@ -13,25 +13,33 @@ import Details from './component/Details/Details';
 import Teams from './component/Teams/Teams';
 import Signup from './component/Signup/Signup';
 import Login from './component/Login/Login';
+import AuthProvider from './component/Context/AuthProvider';
+import PrivateRoute from './component/PrivateRoute/PrivateRoute';
+import Profile from './component/Profile/Profile';
 
 function App() {
   return (
     <Router>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/team" element={<Teams />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Service />} />
-        <Route path='/details' element={<Details/>}/>
-        <Route path='/signup' element={<Signup/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path="*" element={<NotFound />} />
+      <AuthProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/team" element={<PrivateRoute>
+            <Teams />
+          </PrivateRoute>} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path='/details' element={<Details />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/login' element={<Login />} />
+          <Route path="*" element={<NotFound />} />
 
-      </Routes>
-      <Footer/>
+        </Routes>
+        <Footer />
+      </AuthProvider>
     </Router>
   );
 }

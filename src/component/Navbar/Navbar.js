@@ -2,24 +2,38 @@ import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../../img/logo/gym logo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import Login from '../Login/Login';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 export default function Example() {
+
+  // use firebase
+  const { user, logOut } = useAuth();
+  const navigate = useNavigate();
+  const handelSignIn = () =>{
+    navigate('/login')
+  }
+  const handelSignUp = () =>{
+    navigate('/signup')
+  }
+
+  const currentLocation = window.location.pathname;
   const [navigation, setNavigation] = useState([
-    { name: 'Home', href: '/home', current: true },
-    { name: 'Team', href: '/team', current: false },
-    { name: 'Service', href: '/service', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Home', href: '/home' },
+    { name: 'Team', href: '/team' },
+    { name: 'Service', href: '/service' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ]);
-  const handleItemClick = (index) => {
-    // Update the 'current' status of the clicked item
+  const handleItemClick = (item) => {
+    // // Update the clicked item
     const updatedNavigation = navigation.map((item, i) =>
-      i === index ? { ...item, current: true } : { ...item, current: false }
-    );
+      i === item ? { ...item } : { ...item });
+
     setNavigation(updatedNavigation);
   };
   return (
@@ -42,7 +56,7 @@ export default function Example() {
               {/* image and nav text */}
               <div className="flex flex-auto justify-center sm:items-center sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/">
+                  <Link to="/home">
                     <img
                       className="h-[5rem] w-auto"
                       src={logo}
@@ -56,9 +70,9 @@ export default function Example() {
                       <Link
                         key={item.name}
                         to={item.href}
-                        onClick={() => handleItemClick(index)}
+                        onClick={() => handleItemClick()}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          (item.href === currentLocation) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -84,10 +98,12 @@ export default function Example() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <i className="fa-solid fa-arrow-right-to-bracket h-8 w-8 rounded-full text-white flex justify-center items-center"></i>
+                      {user.email && user?.photoURL ? <img className='w-8 h-8 rounded-full' src={user?.photoURL} /> : user.email && !user?.photoURL ? <i className="fa-regular fa-user h-6 w-6 flex justify-center items-center text-white"></i> : <button onClick={handelSignUp}  className="pointer text-sm font-medium text-gray-800 bg-gray-300 rounded  px-3 py-2 mx-2">Sign up</button>
+                      }
+
                     </Menu.Button>
                   </div>
-                  <Transition
+                 {user.email ?  <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
                     enterFrom="transform opacity-0 scale-95"
@@ -99,9 +115,8 @@ export default function Example() {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <Link
-                            to="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          <Link to="/profile"
+                            className={classNames(active ? 'bg-gray-100 text-center' : '', 'block px-4 py-2 text-sm text-gray-700 text-center')}
                           >
                             Your Profile
                           </Link>
@@ -109,26 +124,16 @@ export default function Example() {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </Link>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <Link
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          <button
+                          onClick={logOut}
+                            className={classNames(active ? 'bg-gray-100 w-full' : '', 'block px-4 py-2 text-sm text-gray-700 w-full')}
                           >
                             Sign out
-                          </Link>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>
-                  </Transition>
+                  </Transition> : <span></span>}
                 </Menu>
               </div>
             </div>
@@ -142,14 +147,14 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    (item.href === currentLocation) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
                   <Link
-                   to={item.href}
-                   onClick={() => handleItemClick(index)}
+                    to={item.href}
+                    onClick={() => handleItemClick()}
                   >
                     {item.name}
                   </Link>
