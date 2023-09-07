@@ -3,7 +3,7 @@ import useAuth from '../../Hooks/useAuth';
 import { Navigate } from 'react-router';
 
 const Profile = () => {
-        const { user } = useAuth();
+        const { user, logOut } = useAuth();
 
         return (
                 user?.email ?
@@ -29,6 +29,9 @@ const Profile = () => {
                                                         </div>
 
                                                 </div>
+                                                <button className='rounded-full py-2 px-3 font-medium bg-gray-800 text-white hover:text-gray-800 my-2 transition duration-700 ease-in-out hover:bg-cyan-500' onClick={logOut}>
+                                                        Sign out
+                                                </button>
                                         </div>
                                 </div>
                         </div>
