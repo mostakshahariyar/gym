@@ -18,11 +18,7 @@ const useFirebase = () => {
                         .then(result => {
                                 setUser(result.user);
                         })
-                        .finally(() => {
-                                setIsLogin(false)
-                        })
-
-
+                        .catch((error) => { alert(error.message) });
         }
         const signUpNewUser = (name, email, password) => {
                 createUserWithEmailAndPassword(auth, email, password)
@@ -34,8 +30,7 @@ const useFirebase = () => {
                                 // ...
                         })
                         .catch((error) => {
-                                const errorCode = error.code;
-                                const errorMessage = error.message;
+                                alert(error.message);
                                 // ..
                         });
                 updateProfile(auth.currentUser, {
@@ -57,8 +52,7 @@ const useFirebase = () => {
                                 // ...
                         })
                         .catch((error) => {
-                                const errorCode = error.code;
-                                const errorMessage = error.message;
+                                alert(error.message);
                         });
         }
 
