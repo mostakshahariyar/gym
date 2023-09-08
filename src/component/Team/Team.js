@@ -13,7 +13,7 @@ const Team = props => {
         }
         return (
                 // card section
-                <div data-aos="zoom-in" className="w-[350px] flex flex-col items-center justify-start p-[5px] m-auto my-5 border-4 bg-white shadow-white drop-shadow-2xl shadow-2xl hover:bg-white rounded border-double hover:translate-y-1 hover:duration-500 duration-500">
+                <div data-aos="zoom-in" className="w-[350px] flex flex-col items-center justify-start p-[5px] m-auto my-5 bg-white shadow-white drop-shadow-3xl shadow-3xl hover:bg-white rounded hover:translate-y-2 hover:duration-500 duration-500">
                         {/* image section */}
                         <div>
                                 <img src={img} className="rounded w-full" alt={title} />

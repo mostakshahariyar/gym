@@ -7,6 +7,7 @@ const Profile = () => {
 
         return (
                 user?.email ?
+                // user information
                         <div data-aos="zoom-in" className='flex flex-col min-h-screen bg-white xl:my-16 xl:mx-80 shadow-2xl rounded-2xl justify-center items-center'>
                                 <div className='flex flex-col justify-center  md:p-14'>
                                         <div className='flex flex-col justify-center'>

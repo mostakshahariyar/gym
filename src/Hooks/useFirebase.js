@@ -9,8 +9,9 @@ const useFirebase = () => {
         const navigate = useNavigate();
         const [user, setUser] = useState({});
         const [isLogin, setIsLogin] = useState(true);
-        const [errors, setErrors] = useState({});
         const auth = getAuth();
+
+        // signin with google button 
         const signInUsingGoogle = () => {
                 setIsLogin(true);
                 const googleProvider = new GoogleAuthProvider();
@@ -20,6 +21,8 @@ const useFirebase = () => {
                         })
                         .catch((error) => { alert(error.message) });
         }
+
+        // sign up user
         const signUpNewUser = (name, email, password) => {
                 createUserWithEmailAndPassword(auth, email, password)
                         .then((userCredential) => {
@@ -34,22 +37,23 @@ const useFirebase = () => {
                                 // ..
                         });
                 updateProfile(auth.currentUser, {
-                        displayName: `name`
+                        displayName: {name}
                 }).then(() => {
                         // Profile updated!
                         // ...
                 }).catch((error) => {
                         // An error occurred
-                        // ...
+                        alert(error.message);
                 });
         }
+        // login user
         const signInUser = (email, password) => {
                 signInWithEmailAndPassword(auth, email, password)
                         .then((userCredential) => {
                                 // Signed in 
                                 const user = userCredential.user;
                                 navigate("/home")
-                                // ...
+                                
                         })
                         .catch((error) => {
                                 alert(error.message);
@@ -67,6 +71,7 @@ const useFirebase = () => {
                 })
         }, [auth])
 
+        // logout
         const logOut = () => {
                 signOut(auth).then(() => {
                         setIsLogin(true)
@@ -74,6 +79,7 @@ const useFirebase = () => {
                 })
                         .catch((error) => {
                                 // An error happened.
+                                alert(error.message);
                         })
                         .finally(() => { setIsLogin(false) })
 
@@ -83,7 +89,6 @@ const useFirebase = () => {
         return {
                 user,
                 signInUsingGoogle,
-                errors,
                 logOut,
                 isLogin,
                 signUpNewUser,
