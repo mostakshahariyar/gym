@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Datas from '../../Hooks/Datas';
 import Teamlist from './Teamlist';
 

@@ -16,7 +16,7 @@ const Signup = () => {
 
         const validateEmail = (email) => {
                 return email.match(
-                        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 );
         };
         const handelName = e => {
@@ -35,7 +35,7 @@ const Signup = () => {
         const handelSubmit = e => {
                 e.preventDefault();
                 if (validateEmail(email)) {
-                        if (password != rePassword) {
+                        if (password !== rePassword) {
                                 setError("password not same.");
                                 return;
                         }

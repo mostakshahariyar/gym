@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Teamlist from '../Teams/Teamlist';
 import useAuth from '../../Hooks/useAuth';
 import Rating from 'react-rating';

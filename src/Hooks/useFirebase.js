@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import initializauthentication from '../component/Firebase/firebase.init';
 
 initializauthentication();
@@ -19,7 +19,8 @@ const useFirebase = () => {
                         .then(result => {
                                 setUser(result.user);
                         })
-                        .catch((error) => { alert(error.message) });
+                        .catch((error) => { alert(error.message) })
+                        .finally(() => { setIsLogin(false) })
         }
 
         // sign up user
@@ -37,7 +38,7 @@ const useFirebase = () => {
                                 // ..
                         });
                 updateProfile(auth.currentUser, {
-                        displayName: {name}
+                        displayName: { name }
                 }).then(() => {
                         // Profile updated!
                         // ...
@@ -53,7 +54,7 @@ const useFirebase = () => {
                                 // Signed in 
                                 const user = userCredential.user;
                                 navigate("/home")
-                                
+
                         })
                         .catch((error) => {
                                 alert(error.message);
@@ -64,17 +65,16 @@ const useFirebase = () => {
         // observe user state change 
         useEffect(() => {
                 onAuthStateChanged(auth, user => {
-                        if (user)
-                                setUser(user);
-                        else
-                                setUser({});
+                        if (user) { setUser(user); }
+                        else { setUser({}); }
+                        setIsLogin(false);
                 })
         }, [auth])
 
         // logout
         const logOut = () => {
+                setIsLogin(true);
                 signOut(auth).then(() => {
-                        setIsLogin(true)
                         setUser({})
                 })
                         .catch((error) => {

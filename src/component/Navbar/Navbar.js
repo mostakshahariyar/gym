@@ -4,7 +4,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../../img/logo/gym logo.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import Login from '../Login/Login';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -14,9 +13,6 @@ export default function Example() {
   // use firebase
   const { user, logOut } = useAuth();
   const navigate = useNavigate();
-  const handelSignIn = () =>{
-    navigate('/login')
-  }
   const handelSignUp = () =>{
     navigate('/signup')
   }
