@@ -34,7 +34,7 @@ const useFirebase = () => {
                                 // ...
                         })
                         .catch((error) => {
-                                alert(error.message);
+                                // alert(error.message);
                                 // ..
                         });
                 updateProfile(auth.currentUser, {
@@ -44,7 +44,7 @@ const useFirebase = () => {
                         // ...
                 }).catch((error) => {
                         // An error occurred
-                        alert(error.message);
+                        // alert(error.message);
                 });
         }
         // login user

@@ -1,11 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Teamlist from '../Teams/Teamlist';
 import useAuth from '../../Hooks/useAuth';
 import Rating from 'react-rating';
 
-const Team = props => {
-        const { description, title, rating, img } = props.team;
+const Course = props => {
+        const { description, title, rating, img } = props.course;
         const { user } = useAuth();
         const navigate = useNavigate();
         const handelButton = () => {
@@ -33,9 +32,8 @@ const Team = props => {
                                 <button onClick={handelButton} className='rounded-full py-2 px-3 font-medium bg-gray-800 text-white hover:text-gray-800 my-2 transition duration-700 ease-in-out hover:bg-cyan-500'>All Details</button>
 
                         </div>
-                        <Teamlist />
                 </div>
         );
 };
 
-export default Team;
+export default Course;

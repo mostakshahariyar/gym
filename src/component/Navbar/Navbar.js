@@ -20,7 +20,7 @@ export default function Example() {
   const currentLocation = window.location.pathname;
   const [navigation, setNavigation] = useState([
     { name: 'Home', href: '/home' },
-    { name: 'Team', href: '/team' },
+    { name: 'Course', href: '/course' },
     { name: 'Service', href: '/service' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },

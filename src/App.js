@@ -10,7 +10,7 @@ import Navbar from './component/Navbar/Navbar'
 import Footer from './component/Footer/Footer';
 import Contact from './component/Contact/Contact';
 import Details from './component/Details/Details';
-import Teams from './component/Teams/Teams';
+import Courses from './component/Courses/Courses';
 import Signup from './component/Signup/Signup';
 import Login from './component/Login/Login';
 import AuthProvider from './component/Context/AuthProvider';
@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/team" element={<PrivateRoute>
-            <Teams />
+          <Route path="/course" element={<PrivateRoute>
+            <Courses />
           </PrivateRoute>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
